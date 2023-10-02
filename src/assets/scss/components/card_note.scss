@@ -1,0 +1,96 @@
+.card__container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200.34px, 1fr));
+    gap: 15px;
+
+    .card__item {
+        border-radius: 10px;
+        height: 170px;
+        background-color: #fff;
+        display: grid;
+        grid-template-rows: 45px calc(100% - 90px) 45px;
+        border: 1px solid #e6ecf2;
+        border-radius: 10px;
+
+        .card__head {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0px 20px;
+            padding-top: 5px;
+
+            .btn__status {
+                padding: 3.5px 10px;
+                font-size: 12px;
+                font-weight: 600;
+                border: none;
+                outline: none;
+                border-radius: 20px;
+                color: #fff;
+            }
+
+            .icon__favirutes {
+                font-size: 17px;
+                color: rgb(67, 94, 145);
+                cursor: pointer;
+            }
+        }
+
+        .card__body {
+            display: flex;
+            flex-direction: column;
+            padding: 0px 22px;
+            overflow: hidden;
+
+            .title {
+                font-size: 14.7px;
+                font-weight: 700;
+                color: #4d5172;
+                margin-bottom: 5px;
+                margin-top: 5px;
+                -webkit-box-orient: vertical;
+                -webkit-line-clamp: 1;
+                line-height: 1.3;
+                max-height: calc(1 * 1.3);
+                overflow: hidden;
+            }
+
+            .description {
+                font-size: 14px;
+                font-weight: 500;
+                color: #999191;
+                display: -webkit-box;
+                -webkit-box-orient: vertical;
+                -webkit-line-clamp: 2;
+                line-height: 1.6;
+                max-height: calc(2 * 1.6);
+                overflow: hidden;
+            }
+        }
+
+        .card__foot {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0px 22px;
+            padding-bottom: 5px;
+
+            .time {
+                font-size: 14px;
+                font-weight: 500;
+                color: rgb(67, 94, 145);
+            }
+
+            .wp__icon {
+                display: flex;
+                gap: 8px;
+
+                .icon__action {
+                    font-size: 15px;
+                    color: rgb(67, 94, 145);
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}

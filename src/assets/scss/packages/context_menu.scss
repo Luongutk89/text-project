@@ -1,0 +1,37 @@
+.context__menu {
+    cursor: pointer;
+    user-select: none;
+
+}
+
+
+.context__menu-option {
+    border-radius: 10px;
+    padding: 10px 0px;
+    border: 1px solid #e8ecf0;
+    box-shadow: 0 8px 10px #0325821a;
+    background-color: #fff;
+    right: 10px;
+    position: absolute;
+    font-size: 14.5px;
+    font-weight: 500;
+    color: #1c244f;
+    z-index: 1000;
+
+    .context__option-item {
+        height: 35px;
+        padding: 15px;
+        display: flex;
+        align-items: center;
+
+        span {
+            display: flex;
+            align-items: center;
+            gap: 7px;
+
+            .icon__menu {
+                margin-top: -2px;
+            }
+        }
+    }
+}

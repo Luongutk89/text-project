@@ -1,0 +1,316 @@
+.editor__container {
+    background-color: #faf8f8;
+    overflow-x: auto;
+    height: 100%;
+
+    .editor__option {
+        height: 55px;
+        display: flex;
+        align-items: center;
+        gap: 13px;
+        background-color: #ffffff;
+        padding: 0px 15px;
+        border-bottom: 1px solid $border-color;
+
+        .option__item {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 25px;
+            height: 25px;
+            background-color: transparent;
+            border: none;
+            outline: none;
+            cursor: pointer;
+
+
+            .option__item-icon {
+                font-size: 18px;
+                color: #131837;
+            }
+        }
+    }
+
+    .editor__content {
+        height: calc(100% - 55px);
+        max-height: calc(100% - 55px);
+        overflow: auto;
+        outline: none;
+        padding: 15px 20px;
+        line-height: 1.6;
+        font-weight: 500;
+        font-size: 15px;
+
+        ul,
+        ol {
+            padding-left: 20px;
+
+            li {
+                padding: 1px 0px;
+                padding-left: 5px;
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+.test__container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 10px;
+    column-gap: 20px;
+    padding-top: 10px;
+}
+
+.word-pair {
+    display: flex;
+    border: 1px solid #f3ebeb;
+    border-radius: 5px;
+    align-items: center;
+    background-color: #F5F5F8;
+    height: 38px;
+
+    &.correct {
+        background-color: #c8f7c5;
+    }
+
+    &.incorrect {
+        background-color: #f7c5c5;
+    }
+
+    .index {
+        height: 100%;
+        border-right: 1px solid #eee4e4;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-width: 40px;
+        user-select: none;
+        font-size: 14px;
+        font-weight: 700;
+        color: rgb(24, 33, 54);
+    }
+
+    .english-word {
+        min-width: 120px;
+        padding: 0px 10px;
+        font-weight: 700;
+        text-transform: capitalize;
+        cursor: copy;
+        user-select: none;
+        font-size: 15px;
+        font-weight: 700;
+        color: rgb(24, 33, 54);
+
+        &:active {
+            color: #2b6ad8;
+        }
+    }
+
+    .input__ansers {
+        width: calc(100% - 170px - 50px - 40px);
+        border: none;
+        border-left: 1px solid #f0e9e9;
+        padding: 0px 15px;
+        font-size: 15px;
+        text-transform: capitalize;
+        outline: none;
+        background-color: transparent;
+        font-size: 15px;
+        font-weight: 500;
+        color: rgb(24, 33, 54);
+    }
+}
+
+.btn__read {
+    width: 36px;
+    margin-left: 10px;
+    background-color: #3E96FF;
+    color: #fff;
+    font-size: 14px;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    height: 100%;
+    transition: background-color 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &:hover {
+        background-color: #daa136;
+    }
+
+    .icon__read {
+        font-size: 16px;
+    }
+}
+
+
+.wp__foot {
+    user-select: none;
+    margin: 20px 0px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    align-items: center;
+    gap: 15px;
+    height: 40px;
+
+    p {
+        height: 100%;
+        display: flex;
+        align-items: center;
+        padding: 0px 15px;
+        border-radius: 5px;
+        text-align: center;
+        justify-content: center;
+        font-weight: 600;
+        font-size: 14px;
+
+        &.correct {
+            background-color: #baf1b5;
+        }
+
+        &.incorrect {
+            background-color: #fdbcbc;
+        }
+    }
+}
+
+.btn__answers {
+    height: 100%;
+    background-color: #3E96FF;
+    color: #fff;
+    font-size: 14px;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+    font-weight: 500;
+
+    &:hover {
+        background-color: #2b6ad8;
+    }
+
+    &:active {
+        transform: translateY(2px);
+    }
+}
+
+.btn__reset {
+    height: 100%;
+    background-color: #f489f2;
+    color: #fff;
+    font-size: 15px;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 500;
+
+    &:hover {
+        background-color: #e46fe2;
+    }
+
+    &:active {
+        transform: translateY(2px);
+    }
+}
+
+
+.wp__notfound {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+
+.sweet-loading {
+    height: 100vh;
+    width: calc(100% - 64px - 250px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+    position: fixed;
+    left: calc(64px + 250px);
+    left: 0;
+    width: 100%;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 10000;
+}
+
+
+.tabs__container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    height: calc(100vh - 55px);
+
+    .list__tabs {
+        display: flex;
+        gap: 25px;
+        height: 100%;
+        border-bottom: 1px solid $border-color;
+        height: 50px;
+        position: relative;
+        padding: 0px 20px;
+        position: sticky;
+        top: 0;
+        background-color: #fff;
+        z-index: 1000;
+
+        .tab__item {
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            padding: 0px 2px;
+            padding-top: 1px;
+            color: rgb(120, 123, 126);
+            transition: all 0.2s ease-in-out;
+            user-select: none;
+            border: none;
+            outline: none;
+            background-color: transparent;
+
+            &.active {
+                color: #3E96FF;
+            }
+        }
+    }
+
+    .line {
+        height: 2px;
+        background-color: #3E96FF;
+        position: absolute;
+        bottom: 0;
+        transition: all 0.2s ease-in-out;
+        border-radius: 1px;
+    }
+
+    .tab__content {
+        padding: 15px 20px;
+        height: calc(100vh - 55px - 50px);
+        overflow: auto;
+    }
+}
+
+
+.todo__container {
+    padding: 20px;
+}

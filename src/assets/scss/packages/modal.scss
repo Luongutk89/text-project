@@ -1,0 +1,113 @@
+.modal__overlay {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    transition: all 0.2s ease-in-out;
+    z-index: 1000000;
+
+    .modal {
+        display: grid;
+        grid-template-rows: 60px calc(100% - 120px) 60px;
+        background-color: #fff;
+        width: 700px;
+        height: 460px;
+        margin: 0px auto;
+        transition: all 0.2s ease-in-out;
+        border-radius: 10px;
+
+        &.active {
+            transform: translateY(40px);
+        }
+
+        .modal__header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #f3ebeb;
+            padding: 0px 25px;
+
+            .modal__title {
+                font-size: 18px;
+                color: rgb(62, 62, 94);
+            }
+
+            .modal__btn-close {
+                width: 25px;
+                height: 25px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border: none;
+                outline: none;
+                border-radius: 5px;
+                cursor: pointer;
+                background-color: #F7F1F1;
+                transition: all 0.1s ease-in-out;
+
+                &:hover {
+                    background-color: #ede3e3;
+                }
+
+                .icon__close {
+                    font-size: 15px;
+                    color: #011627;
+                }
+            }
+        }
+
+        .modal__body {
+            padding: 15px 25px;
+
+            .text__demo {
+                font-size: 15px;
+                font-weight: 400;
+            }
+        }
+
+        .modal__footer {
+            border-top: 1px solid #f3ebeb;
+            padding: 0px 25px;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            gap: 10px;
+
+            .btn__close-modal,
+            .btn__finish-modal {
+                padding: 8px 20px;
+                border: none;
+                outline: none;
+                border-radius: 5px;
+                cursor: pointer;
+                font-size: 13.5px;
+            }
+
+            .btn__finish-modal {
+                background-color: $primary-color;
+                color: #fff;
+                font-weight: 400;
+                transition: all 0.1s ease-in-out;
+
+                &:hover {
+                    background-color: #1f6df4;
+                }
+            }
+
+            .btn__close-modal {
+                background-color: #F7F1F1;
+                color: #011627;
+                font-weight: 500;
+                transition: all 0.1s ease-in-out;
+
+                &:hover {
+                    background-color: #eee4e4;
+                }
+            }
+        }
+    }
+}

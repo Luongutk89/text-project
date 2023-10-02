@@ -1,0 +1,28 @@
+@import './variables.scss';
+@import './reset.scss';
+@import './layout.scss';
+@import './global.scss';
+
+
+
+@import './packages/modal.scss';
+@import './packages/collapsible.scss';
+@import './packages/dropdown.scss';
+@import './packages/tab.scss';
+@import './packages/context_menu.scss';
+
+
+
+@import './components/header.scss';
+@import './components/navbar.scss';
+
+@import './components/card_note.scss';
+@import './components/note_detail.scss';
+@import './components/text_editor.scss';
+
+@import './components/table_recent.scss';
+@import './components/login.scss';
+@import './components/register.scss';
+@import './components/modal_add_note.scss';
+@import './components/navbar_content.scss';
+@import './components/CardNoteItem.scss';

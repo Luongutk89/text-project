@@ -1,0 +1,49 @@
+.collapsible__container {
+    background-color: #fff;
+    border: 1px solid #f6f0f0;
+    border-radius: 5px;
+    padding: 0px 20px;
+    margin-bottom: 10px;
+
+    .collapsible__header {
+        height: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        cursor: pointer;
+        transition: all 0.3s ease-in-out;
+        user-select: none;
+
+        .header__left {
+            display: flex;
+            gap: 30px;
+
+            .header__left-title {
+                font-weight: 700;
+                font-size: 15.5px;
+                color: #192849;
+            }
+
+            .header__left-total {
+                font-size: 15.5px;
+                color: #192849;
+                font-weight: 500;
+            }
+        }
+
+        .icon__collapse {
+            font-size: 15px;
+            transition: all 0.3s ease-in-out;
+
+            &.active {
+                transform: rotate(180deg);
+            }
+        }
+    }
+
+    .collapsible__content {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease-in-out;
+    }
+}
